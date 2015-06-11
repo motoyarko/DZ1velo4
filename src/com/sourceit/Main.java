@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -32,21 +33,26 @@ public class Main {
         parseUsers(users, scanner);
         parseBicicles(bicicles, scanner1);
 
-//temp
+        for (User user: users){
+            for (Bicicle bicicle: bicicles) {
+                CrossCountry cross = new CrossCountry();
+                MountainBike mountain = new MountainBike();
 
-
-
-
-
-
-
-
-
-
+                if (cross.checkBicicleType(bicicle)){
+                    System.out.println( "user" + user.getName() +" ride on a " + bicicle.getBicicleType() + cross.calcCalories(user, bicicle));
+                }
+                else if (mountain.checkBicicleType(bicicle)) {
+                    System.out.println("user" + user.getName() + " ride on a " + bicicle.getBicicleType() + mountain.calcCalories(user, bicicle));
+                }
+                else {
+                    System.out.println("user" + user.getName() + " ride on a gnome");
+                }
+            }
+        }
 
 // test print database
 
-        for (int a = 0; a < users.length; a++  ) {
+       /* for (int a = 0; a < users.length; a++  ) {
             if (users[a] != null){
                 System.out.println(users[a].getAge() +" "+ users[a].getHeight() +" "+ users[a].getWeight() +" "+ users[a].getGirth());
             }
@@ -55,7 +61,7 @@ public class Main {
             if (bicicles[a] != null){
                 System.out.println(bicicles[a].getWheelsDiameter() +" "+ bicicles[a].getBaseSize() +" "+ bicicles[a].getIsBrakesExist() +" "+ bicicles[a].getBicicleType());
             }
-        }
+        }*/
     }
 
     private static void parseBicicles(Bicicle[] bicicles, Scanner scanner1) {
@@ -76,14 +82,8 @@ public class Main {
                     bicicle.setBicicleType(bicicleType);
                     bicicles[i] = bicicle;
                     i++;
-
-
-
                 }
             }
-
-
-
         }
     }
 
@@ -99,12 +99,13 @@ public class Main {
                     Long height = (Long) jsonObject.get("height");
                     Long weight = (Long) jsonObject.get("weight");
                     Long girth = (Long) jsonObject.get("girth");
+                    String name = (String) jsonObject.get("name");
                     User user = new User();
                     user.setAge(age);
                     user.setHeight(height);
                     user.setWeight(weight);
                     user.setGirth(girth);
-
+                    user.setName(name);
                     users[i] = user;
                     i++;
                 }

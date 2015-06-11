@@ -8,7 +8,7 @@ public class Bicicle {
     private Long wheelsDiameter;
     private Long baseSize;
     private boolean isBrakesExist;
-    boolean isBrakesExist1;
+    //boolean isBrakesExist1;
     private String bicicleType;
 
 

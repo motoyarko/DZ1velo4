@@ -9,6 +9,11 @@ public class User {
     private Long height;
     private Long weight;
     private Long girth;
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public void setAge(Long age) {
         this.age = age;
@@ -41,5 +46,9 @@ public class User {
 
     public Long getGirth() {
         return girth;
+    }
+
+    public String getName() {
+        return name;
     }
 }

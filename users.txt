@@ -1,10 +1,10 @@
-{"age":10, "height":20, "weight":30, "girth":40}
-{"age":11, "height":21, "weight":31, "girth":41}
-{"age":12, "height":22, "weight":32, "girth":42}
-{"age":13, "height":23, "weight":33, "girth":43}
-{"age":14, "height":24, "weight":34, "girth":44}
-{"age":15, "height":25, "weight":35, "girth":45}
-{"age":16, "height":26, "weight":36, "girth":46}
-{"age":17, "height":27, "weight":37, "girth":47}
-{"age":18, "height":28, "weight":38, "girth":48}
-{"age":19, "height":29, "weight":39, "girth":49}
+{"age":10, "height":20, "weight":30, "girth":40, "name":"Vasja"}
+{"age":11, "height":21, "weight":31, "girth":41, "name":"Valentin"}
+{"age":12, "height":22, "weight":32, "girth":42, "name":"Kolja"}
+{"age":13, "height":23, "weight":33, "girth":43, "name":"Pupkin"}
+{"age":14, "height":24, "weight":34, "girth":44, "name":"Veronika"}
+{"age":15, "height":25, "weight":35, "girth":45, "name":"Stepan"}
+{"age":16, "height":26, "weight":36, "girth":46, "name":"Rostik"}
+{"age":17, "height":27, "weight":37, "girth":47, "name":"Vlad"}
+{"age":18, "height":28, "weight":38, "girth":48, "name":"Misha"}
+{"age":19, "height":29, "weight":39, "girth":49, "name":"Madonna"}
